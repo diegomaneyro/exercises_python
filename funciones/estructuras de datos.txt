@@ -1,0 +1,27 @@
+lista 1:
+
+crear variable publica tipo lista. con obejtos string
+mostrar todos los objetos de la lista
+mostrar objeto posicion 2
+mostrar objetos de la posicion 1 hasta la 3
+mostrar todos lo objetos a partir de la posicion 2 hasta el final
+mostrar tipo de dato de la variable lista
+mostrar la lista multiplicada por 4
+agregar objeto  sin posicion a la lista
+agregar en la posicion 4 un objeto
+eliminar objeto posicion 3
+guardar en una variable el ultimo objeto de a lista y luego borrarlo
+
+crear una tupla con los numeros del 1 al 20
+mostrar los datos de la tupla
+mostrar los valores del 10 al 16
+evaluar si el numero20 y 30 estan en la tupla
+con la lista 1 validar la existencia del elemento "paris" y si no existe agregarlo 
+	utilizar una variable e informar lo sucedido
+mostrar la cantida de veces que se encuentra un objeto dentro de la lista y la tupla
+convertir la tupla en una lista
+ desempaquetar solo los 3 elementos de la tupla en 3 variables
+crear un diccionario utilizando la lista creada en el púnto 1, asignandole la clave "ciudad".
+	agregar tambien otras claves como ser "paris" y "continente"
+mostrar ciudades a travez de su clave
+

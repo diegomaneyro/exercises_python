@@ -1,0 +1,7 @@
+1. funcion que verifica si es primo  un numero
+
+2. utilizando la funcion del punto 1 realizar otra funcion que reciva de parametro una lista de numeros
+ y deveuelva solo aquellos que son primos en otra lista
+
+3. crear una funcion que reciba una lista de numeros, devuelva el que mas se repite y cuantas veces
+lo hace. si hay mas de un "mas repetido", que devuelva cualquiera
