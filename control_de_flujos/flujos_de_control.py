@@ -1,100 +1,134 @@
 #1.
-# v1 = -2
-# if v1 >0:
-#     print(f"variable: {v1} es es mayor que cero")
-# elif v1 < 0:
-#     print(f"variable: {v1} es menor que cero")
-# else:
-#     print(f"variable: {v1} es igual a cero")
+"""
+num = int(input("ingrese un numero entero: "))
+if num<0:
+    print(f"El numero: {num} es menor que cero")
+elif num==0:
+    print(f"El numero: {num} es cero")
+else:
+    print("Numero: ", num, " es mayor que cero")
+"""
 
+"""
 #2.
-# v1 = "12"
-# v2 = "12"
-# if type(v1) == type(v2):
-#     print("v1 y v2 son del mismo tipo de dato")
-# else:
-#     print("v1 y v2 son de diferentes tipos d datos")
-#
+v1 = 3.1415
+v2 = 31415
+if (type(v1)==type(v2)):
+    print("v1 y v2: si ,son del mismo tipo de dato")
+else:
+    print("v1 y v2: no , son del mismo tipo de dato")
+"""
 
 #3.
-# for i in range(1,21):
-#     if i % 2 == 0:
-#         print(f"{i} es par")
-#     else:
-#         print(f"{i} es impar")
+"""
+for i in range(1,21):
+    if i % 2 == 0:
+        print(i, "Es par")
+"""
 
 #4.
-# for i in range(1,6):
-#     print(f"{i} elevado a la 3 es: {i**3}")
-#
+""""
+for i in range(0,6):
+     print(f"{i} al cubo= ", i**3)
+"""
 
-# #5.
-# numero = 5
-# for i in range(1,numero+1):
-#     print(i)
+"""
+5.
+mi_variable = 7
+
+for i in range(0,mi_variable):
+    print(i)
+"""
 
 #6.
-
-# numero = int(input("ingrese un numero positivo mayor que cero: "))
-#
-# if (type(numero) == int):
-#     if numero <= 0:
-#         print("ingrese un numero mayor que cero")
-#     else:
-#         factorial = numero
-#         while (numero>2):
-#             numero = numero - 1
-#             factorial = factorial * numero
-#         print(f"El factorial es {factorial}")
-# else:
-#     print("ingrese un numero entero")
+"""
+num = int(input("ingrese un numero entero mayor que cero:"))
+if(type(num)==int):
+    if(num>0):
+        factorial = 1
+        while(num>1):
+            factorial = num * factorial
+            num -= 1
+        print("El factorial es: ", factorial)
+    else:
+        print("ingrese numero mayor que cero")
+else:
+    print("tipo de dato invalido")
+"""
 
 #7.
-# n = 5
-# while(n>0):
-#     for i in range(0,n):
-#         print(n)
-#     n = n - 1
-# print("fin del ciclo")
+"""
+num = 5
+while(num>1):
+    for i in range(0,num):
+        print(f"i vale: {i}")
+        num -=1
+"""
 
 #8.
-# n = 5
-# for i in range(1,n):
-#     while(n>0):
-#         n = n-1
-#         print(n)
+"""num = 5
+for i in range(0,num):
+    while(num>1):
+        print(num)
+        num -=1
+"""
 
 #9.
-#
-# for i in range(1,31):
-#     if i % 2 == 0:
-#         print(f"{i}, es primo")
+"""n = 0
+tope_maximo = 30
+es_primo = True
+ciclos_for = 0
+while(n<tope_maximo):
+    for i in range(2, n):
+        ciclos_for += 1
+        if n % i == 0:
+            es_primo = False
+            break
+    if(es_primo):
+        print(n, " Es primo")
+    else:
+        es_primo = True
+    n += 1
+print("ciclos for: ", ciclos_for)
+"""
 
+#10.
+"""n = 99
+tope = 300
+while(n<=tope):
+    n +=1
+    if (n % 12 !=0):
+        continue
+    print(n, "es divisible por 12")
 
-# while(n<maximo):
-#     for i in range(2,n):
-#         if (n % i == 0):
+"""
+#14.
+# numero = 1
+# primo = True
+# sigue = 1
+# while(sigue == 1):
+#     for i in range(2,numero):
+#         if (numero % i == 0):
 #             primo = False
 #             break
-#     if (primo):
-#         print(n)
+#     if(primo):
+#         print(numero, "es primo")
+#         print("desea buscar otro numero primo? presione 1 para continuar")
+#         if (input() != "1"):
+#             print("fin del proceso")
+#             break
+#
 #     else:
 #         primo = True
+#     numero += 1
+
+#15.
+# n = 99
+# tope_rango = 300
+# while(n<= 300):
 #     n += 1
-
-
-#11.
-maximo = 30
-n = 0
-primo = True
-while(n<maximo):
-    for i in range(2,n):
-        if n % i == 0:
-            primo= False
-            break
-    if(primo):
-        print(n)
-    else:
-        primo = True
-    n += 1
-
+#     if n % 3 == 0:
+#         if n % 6 == 0:
+#             print("numero encontrado: ", n)
+#             break
+#
