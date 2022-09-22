@@ -79,25 +79,20 @@ print(a_farenheit)
 metricas = ["celcius","kelvin","farenheit"]
 for i in range(0,3):
     for j in range(0,3):
-        print(f'1 grado: {metricas[i]} a {metricas[j]}: {convierte_grados(1,metricas[i],metricas[j])}')
-
+        """print(f'1 grado: {metricas[i]} a {metricas[j]}: {convierte_grados(1,metricas[i],metricas[j])}')
+"""
 
 def factorial(numero):
    if type(numero) != int:
        return 'Error: Ingrese un numero entero'
-   elif(type(numero)==int):
-       if numero<0:
-           return 'Error: Ingrese un numero positivo'
-       else:
-           factor = 0
-           n = numero
-           while(n>1):
-               factor += numero * (numero-1)
-               n-=1
-           return factor
+   if numero<0:
+       return 'Error: Ingrese un numero positivo'
+   if(numero>1):
+       numero = numero * factorial(numero-1)
+   return numero
 
 
-numero = 3
+numero = 4
 resultado = factorial(numero)
 print(f'el factorial de: {numero} es: {resultado}')
 
