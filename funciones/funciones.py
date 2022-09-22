@@ -77,11 +77,35 @@ def convierte_grados(grados, origen, salida):
 a_celcius = convierte_grados(30, "farenheit","celcius")
 a_farenheit = convierte_grados(30, "kelvin","farenheit")
 a_kelvin = convierte_grados(30, "celcius","kelvin")
-"""print(a_celcius)
+"""
+print(a_celcius)
 print(a_kelvin)
-print(a_farenheit)"""
+print(a_farenheit)
+"""
 
 metricas = ["celcius","kelvin","farenheit"]
 for i in range(0,3):
     for j in range(0,3):
-        print(f'1 grado: {metricas[i]} a {metricas[j]}: {convierte_grados(1,metricas[i],metricas[j])}')
+        """print(f'1 grado: {metricas[i]} a {metricas[j]}: {convierte_grados(1,metricas[i],metricas[j])}')"""
+
+
+def factorial(numero):
+   if type(numero) != int:
+       return 'Error: Ingrese un numero entero'
+   elif(type(numero)==int):
+       if numero<0:
+           return 'Error: Ingrese un numero positivo'
+       else:
+           factor = 0
+           n = numero
+           while(n>1):
+               factor += numero * (numero-1)
+               n-=1
+           return factor
+
+
+numero = 3
+resultado = factorial(numero)
+print(f'el factorial de: {numero} es: {resultado}')
+
+
