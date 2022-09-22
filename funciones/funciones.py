@@ -85,9 +85,9 @@ for i in range(0,3):
 def factorial(numero):
    if type(numero) != int:
        return 'Error: Ingrese un numero entero'
-   if numero<0:
+   elif numero<0:
        return 'Error: Ingrese un numero positivo'
-   if(numero>1):
+   elif(numero>1):
        numero = numero * factorial(numero-1)
    return numero
 
