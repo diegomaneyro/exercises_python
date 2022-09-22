@@ -1,1 +1,0 @@
-crear funcion que convierta  grados reciva tres parametros: valor(grados) origen(c,f,k) destino(c,f,k)

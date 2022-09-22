@@ -1,2 +1,0 @@
-funcion factorial 
-y tener en cuenta que el usuario puede equivocarse y enviar un numero no entero o negativo
