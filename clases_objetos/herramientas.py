@@ -1,34 +1,61 @@
-class herramientas:
+class Herramientas:
     """
     Clase herramientas. metodos verificar primo, valor modal, canversion grados, factorial
     """
     def __init__(self, lista_numeros) -> None:
-        self.lista = lista_numeros
+        if (type(lista_numeros) != list):
+            self.lista = [0]
+            raise ValueError('se creo una lista inicializada en cero. se esperaba un lista de numeros enteros')
+        else:
+            self.lista = lista_numeros
 
     def factorial(self, ):
         for i in self.lista:
             print(f'el factorial de: {i} es: {self.__factorial(i)}')
 
-    def conversion_grados(self, origen, destino):
+    def conversion_grados(self, entrada, salida):
+        lista_parametros_esperados = ["celcius","kelvin","farenheit"]
+        lista_grados = []
+        if (str(entrada) not in lista_parametros_esperados):
+            print('los paramaros esperados son: ',lista_parametros_esperados)
+            return lista_grados
+        if (str(salida) not in lista_parametros_esperados):
+            print('los parametros esperados son: ',lista_parametros_esperados)
+            return lista_grados
         for i in self.lista:
-            print(i, 'grados', origen, 'es: ', self.__conversion_grados(i, origen, destino), 'grados', destino)
+            lista_grados.append(self.__conversion_grados(i, entrada, salida))
+        return lista_grados
 
     def verifica_primo(self, lista):
-        for i in self.lista:
-            if (self.__verficar_primo(i)):
-                print(f'el elemento: {i} es primo')
-            else:
-                print(f'el elemento: {i} no es primo')
+        lista_primo=[]
+        if (type(lista) != list):#valida error de input
+           raise ValueError('Error de ingreso tipo de dato, se esperaba una lista')
+        else:
+            for i in self.lista:
+                if (self.__verficar_primo(i)):
+                    lista_primo.append(True)
+                else:
+                    lista_primo.append(False)
+            return lista_primo
+
 
     def valor_modal(self, menor):
-        if len(self.lista) == 0:
-            return None
-        if (menor):
-            lista.sort()
-        else:
-            self.lista.sort(reverse=True)
+        """
+        numero modal: mas se repite de una lista y cual es el numero mas repetido
+        pide menor o mayor
+        retorna una lista con moda y maximo
+        """
         lista_unicos = []
         lista_repetidos = []
+
+        if len(self.lista) == 0:
+            return None
+
+        if (menor):
+            self.lista.sort()
+        else:
+            self.lista.sort(reverse=True)
+
         for elemento in self.lista:
             if elemento in lista_unicos:
                 i = lista_unicos.index(elemento)
@@ -42,7 +69,7 @@ class herramientas:
             if lista_repetidos[i]>maximo:
                 maximo = lista_repetidos[i]
                 moda = lista_unicos[i]
-        return 'el valor modal es: ',moda,'el maximo repetido es: ', maximo
+        return moda, maximo
     def __verficar_primo(self,numero):
         es_primo = True
         for i in range(2,numero):
@@ -55,6 +82,7 @@ class herramientas:
             es_primo = True
 
     def __conversion_grados(self,grados, entrada, salida):
+        grados_salida = None
         if entrada == "celcius":
             if salida == "celcius":
                 grados_salida = grados
@@ -91,7 +119,7 @@ class herramientas:
         return numero
 
 if __name__ == "__main__":
-    a = herramientas()
+    a = Herramientas()
     #print(a.verficar_primo(5))
 
 if __name__ == "__main__":
@@ -109,7 +137,3 @@ if __name__ == "__main__":
     grados_salida = a.conversion_grados(1, "kelvin", "celcius")
     print('1° kelvin a celcius',grados_salida,"c°")
     """
-if __name__ == "__main__":
-    numero = 5
-    factor = a.factorial(numero)
-    #print(f'factorial de {numero} es: {factor}')
