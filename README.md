@@ -1,2 +1,2 @@
-# exercises.pre_course
+# exercise_python
 repository of exercices for course
